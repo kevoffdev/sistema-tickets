@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalles de la Noche</title>
+    <link src="./input.css" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="min-h-screen bg-gray-100">
+    <header class="bg-blue-600 text-white">
+      <div class="container mx-auto flex items-center justify-between p-4">
+        <a href="./index.html" class="text-2xl font-bold" id="header-title">Inicio</a>
+      </div>
+    </header>
+    <div class="container mx-auto px-6 py-8">
+      <h1 class="mb-6 text-2xl font-bold text-blue-600">Detalles de la Noche</h1>
+      <div id="details" class="rounded-lg bg-white p-6 shadow">
+        <p>Cargando...</p>
+      </div>
+
+      <div id="tickets-vendidos" class="mt-10"></div>
+      <div id="butacas-vacias" class="mt-10"></div>
+
+      <header class="mt-10 p-4 text-center">
+        <h1 class="text-2xl font-bold">Gestión de Entradas - Festival</h1>
+      </header>
+
+      <main class="flex flex-col gap-6 p-6 lg:flex-row">
+        <section class="flex-1 rounded-lg bg-white p-4 shadow-md">
+          <h2 class="mb-4 text-xl font-semibold">Estadio</h2>
+          <div id="sectores" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+          <div id="ticket"></div>
+        </section>
+
+        <section class="w-full rounded-lg bg-white p-4 shadow-md lg:w-96">
+          <h2 class="mb-4 text-xl font-semibold">Punto de Venta</h2>
+          <form id="venta-form" class="space-y-4">
+            <div>
+              <label for="tipoEntrada" class="block text-sm font-medium">Tipo de Entrada:</label>
+              <select id="tipoEntrada" class="w-full rounded-lg border-gray-300 p-2">
+                <option value="" disabled selected>Seleccionar tipo</option>
+                <option value="mayores">Mayores</option>
+                <option value="menores">Menores</option>
+                <option value="jubilados">Jubilados</option>
+                <option value="discapacitados">Discapacitados</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="sector" class="block text-sm font-medium">Sector:</label>
+              <select id="sector" class="w-full rounded-lg border-gray-300 p-2">
+                <option value="" disabled selected>Seleccionar sector</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="fila" class="block text-sm font-medium">Fila:</label>
+              <select id="fila" class="w-full rounded-lg border-gray-300 p-2">
+                <option value="" disabled selected>Seleccionar fila</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="butaca" class="block text-sm font-medium">Butaca:</label>
+              <select id="butaca" class="w-full rounded-lg border-gray-300 p-2">
+                <option value="" disabled selected>Seleccionar butaca</option>
+              </select>
+            </div>
+
+            <div>
+              <p id="precio" class="text-lg font-semibold text-blue-600">Precio: $0</p>
+            </div>
+
+            <button type="submit" class="w-full rounded-lg bg-blue-600 py-2 text-white hover:bg-blue-700">
+              Vender Entrada
+            </button>
+          </form>
+
+          <div id="mensaje" class="mt-4 text-sm"></div>
+        </section>
+      </main>
+      <div class="mt-10">Tickets comprados</div>
+      <div id="ticket-container" class="mt-6 grid grid-cols-1 gap-4"></div>
+    </div>
+
+    <script src="./detalles.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel de Administración - Festival de Folklore</title>
+    <link src="./input.css" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="min-h-screen bg-gray-100">
+    <header class="bg-blue-600 py-4 text-white shadow-md">
+      <div class="container mx-auto flex items-center justify-between px-6">
+        <h1 class="text-2xl font-bold">Panel de Administración</h1>
+        <button id="logoutButton" class="rounded bg-red-500 px-4 py-2 transition hover:bg-red-600">
+          Cerrar Sesión
+        </button>
+      </div>
+    </header>
+    <div class="min-h-screen bg-gray-100 p-6">
+      <h1 class="mb-6 text-center text-2xl font-bold">Gestión del Festival</h1>
+
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div class="rounded-lg bg-white p-4 shadow" id="noche-1">
+          <h2 class="mb-2 text-xl font-semibold">Noche 1</h2>
+          <p class="mb-4 text-gray-600">Fecha: 2024-12-10</p>
+
+          <form id="form-noche-1" class="space-y-4">
+            <label class="block">
+              <span class="text-gray-700">Nombre del Grupo</span>
+              <input type="text" id="grupo-noche-1" class="w-full rounded-md border border-gray-300" required />
+            </label>
+
+            <div class="mb-4">
+              <label for="reconocimiento-grupo" class="block">Reconocimiento:</label>
+              <select id="reconocimiento-grupo-noche-1" class="w-full rounded border px-3 py-2" required>
+                <option value="Local">Local</option>
+                <option value="Provincial">Provincial</option>
+                <option value="Nacional">Nacional</option>
+              </select>
+            </div>
+
+            <label class="block">
+              <span class="text-gray-700">Horario</span>
+              <select id="horario-noche-1" class="w-full rounded-md border-gray-300 shadow-sm" required>
+                <option value="" disabled selected>Selecciona un horario</option>
+                <option value="20:00-20:30">20:00 - 20:30</option>
+                <option value="20:30-21:00">20:30 - 21:00</option>
+                <option value="21:00-21:30">21:00 - 21:30</option>
+                <option value="21:30-22:00">21:30 - 22:00</option>
+                <option value="22:00-22:30">22:00 - 22:30</option>
+                <option value="22:30-23:00">22:30 - 23:00</option>
+                <option value="23:00-23:30">23:00 - 23:30</option>
+              </select>
+            </label>
+
+            <button type="submit" class="w-full rounded-md bg-green-600 py-2 text-white hover:bg-green-700">
+              Agregar Presentación
+            </button>
+          </form>
+
+          <div id="presentaciones-noche-1" class="mt-6 space-y-4"></div>
+        </div>
+
+        <div class="rounded-lg bg-white p-4 shadow" id="noche-2">
+          <h2 class="mb-2 text-xl font-semibold">Noche 2</h2>
+          <p class="mb-4 text-gray-600">Fecha: 2024-12-11</p>
+          <form id="form-noche-2" class="space-y-4">
+            <label class="block">
+              <span class="text-gray-700">Nombre del Grupo</span>
+              <input type="text" id="grupo-noche-2" class="w-full rounded-md border border-gray-300" required />
+            </label>
+            <div class="mb-4">
+              <label for="reconocimiento-grupo" class="block">Reconocimiento:</label>
+              <select id="reconocimiento-grupo-noche-2" class="w-full rounded border px-3 py-2" required>
+                <option value="Local">Local</option>
+                <option value="Provincial">Provincial</option>
+                <option value="Nacional">Nacional</option>
+              </select>
+            </div>
+            <label class="block">
+              <span class="text-gray-700">Horario</span>
+              <select id="horario-noche-2" class="w-full rounded-md border-gray-300 shadow-sm" required>
+                <option value="" disabled selected>Selecciona un horario</option>
+                <option value="20:00-20:30">20:00 - 20:30</option>
+                <option value="20:30-21:00">20:30 - 21:00</option>
+                <option value="21:00-21:30">21:00 - 21:30</option>
+                <option value="21:30-22:00">21:30 - 22:00</option>
+                <option value="22:00-22:30">22:00 - 22:30</option>
+                <option value="22:30-23:00">22:30 - 23:00</option>
+                <option value="23:00-23:30">23:00 - 23:30</option>
+              </select>
+            </label>
+
+            <button type="submit" class="w-full rounded-md bg-green-600 py-2 text-white hover:bg-green-700">
+              Agregar Presentación
+            </button>
+          </form>
+          <div id="presentaciones-noche-2" class="mt-6 space-y-4"></div>
+        </div>
+
+        <div class="rounded-lg bg-white p-4 shadow" id="noche-3">
+          <h2 class="mb-2 text-xl font-semibold">Noche 3</h2>
+          <p class="mb-4 text-gray-600">Fecha: 2024-12-12</p>
+          <form id="form-noche-3" class="space-y-4">
+            <label class="block">
+              <span class="text-gray-700">Nombre del Grupo</span>
+              <input type="text" id="grupo-noche-3" class="w-full rounded-md border border-gray-300" required />
+            </label>
+            <div class="mb-4">
+              <label for="reconocimiento-grupo" class="block">Reconocimiento:</label>
+              <select id="reconocimiento-grupo-noche-3" class="w-full rounded border px-3 py-2" required>
+                <option value="Local">Local</option>
+                <option value="Provincial">Provincial</option>
+                <option value="Nacional">Nacional</option>
+              </select>
+            </div>
+            <label class="block">
+              <span class="text-gray-700">Horario</span>
+              <select id="horario-noche-3" class="w-full rounded-md border-gray-300 shadow-sm" required>
+                <option value="" disabled selected>Selecciona un horario</option>
+                <option value="20:00-20:30">20:00 - 20:30</option>
+                <option value="20:30-21:00">20:30 - 21:00</option>
+                <option value="21:00-21:30">21:00 - 21:30</option>
+                <option value="21:30-22:00">21:30 - 22:00</option>
+                <option value="22:00-22:30">22:00 - 22:30</option>
+                <option value="22:30-23:00">22:30 - 23:00</option>
+                <option value="23:00-23:30">23:00 - 23:30</option>
+              </select>
+            </label>
+
+            <button type="submit" class="w-full rounded-md bg-green-600 py-2 text-white hover:bg-green-700">
+              Agregar Presentación
+            </button>
+          </form>
+          <div id="presentaciones-noche-3" class="mt-6 space-y-4"></div>
+        </div>
+      </div>
+
+      <!-- MODAL -->
+      <div
+        id="formulario-editar"
+        class="fixed inset-0 flex hidden items-center justify-center bg-gray-500 bg-opacity-75"
+      >
+        <div class="w-1/3 rounded-lg bg-white p-6 shadow-lg">
+          <form id="form-editar-presentacion" class="space-y-4">
+            <label class="block">
+              <span class="text-gray-700">Nombre del Grupo</span>
+              <input type="text" id="grupo-editar" class="w-full rounded-md border border-gray-300" required />
+            </label>
+            <div class="mb-4">
+              <label for="reconocimiento-editar" class="block">Reconocimiento:</label>
+              <select id="reconocimiento-editar" class="w-full rounded border px-3 py-2" required>
+                <option value="Local">Local</option>
+                <option value="Provincial">Provincial</option>
+                <option value="Nacional">Nacional</option>
+              </select>
+            </div>
+            <label class="block">
+              <span class="text-gray-700">Horario</span>
+              <select id="horario-editar" class="w-full rounded-md border-gray-300 shadow-sm" required>
+                <option value="20:00-20:30">20:00 - 20:30</option>
+                <option value="20:30-21:00">20:30 - 21:00</option>
+                <option value="21:00-21:30">21:00 - 21:30</option>
+                <option value="21:30-22:00">21:30 - 22:00</option>
+                <option value="22:00-22:30">22:00 - 22:30</option>
+                <option value="22:30-23:00">22:30 - 23:00</option>
+                <option value="23:00-23:30">23:00 - 23:30</option>
+              </select>
+            </label>
+
+            <button type="submit" class="w-full rounded-md bg-blue-600 py-2 text-white hover:bg-blue-700">
+              Actualizar Presentación
+            </button>
+            <button
+              type="button"
+              id="cerrar-editar"
+              class="mt-4 w-full rounded-md bg-red-600 py-2 text-white hover:bg-red-700"
+            >
+              Cerrar
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- Modal -->
+    </div>
+
+    <script>
+      const user = JSON.parse(sessionStorage.getItem('user'));
+      if (!user || user.role !== 'admin') {
+        alert('Acceso denegado. Redirigiendo...');
+        window.location.href = './login.html';
+      }
+
+      document.getElementById('logoutButton').addEventListener('click', () => {
+        sessionStorage.clear();
+        alert('Sesión cerrada.');
+        window.location.href = './index.html';
+      });
+    </script>
+    <script src="admin.js" type="module"></script>
+  </body>
+</html>

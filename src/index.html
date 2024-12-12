@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Festival de Folklore</title>
+    <link src="./input.css" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100">
+    <header class="bg-blue-600 text-white">
+      <div id="header-div" class="container mx-auto flex items-center justify-between p-4">
+        <h1 class="text-2xl font-bold" id="header-title">Sin titulo</h1>
+        <!-- <a href="./login.html" class="px-4 py-2 text-blue-600 bg-white rounded shadow">
+          Iniciar Sesión / Registrarse
+        </a> -->
+      </div>
+    </header>
+
+    <div class="relative">
+      <img src="assets/images/folklore.jpg" alt="Festival de Folklore" class="h-80 w-full object-cover" />
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <h2 class="text-4xl font-bold text-white">¡Vive la emoción del folklore!</h2>
+      </div>
+    </div>
+
+    <main class="container mx-auto py-8">
+      <h2 class="mb-6 text-center text-2xl font-bold">Elige una noche del festival</h2>
+      <h3 class="mb-4" id="fecha">fechas:</h3>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-3" id="grupos"></div>
+    </main>
+
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
