@@ -272,6 +272,7 @@ const tickets = JSON.parse(localStorage.getItem('ticket')) || [];
 const ticketContainer = document.getElementById('ticket-container');
 
 const userTickets = tickets.filter((ticket) => ticket.userId === user);
+console.log(userTickets);
 document.addEventListener('DOMContentLoaded', () => {
   userTickets.forEach((ticket) => {
     if (ticket.noche === nocheId) {
@@ -287,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p><strong>Butaca:</strong> ${ticket.butaca}</p>
     <p><strong>Tipo de Entrada:</strong> ${ticket.tipo}</p>
     <p><strong>Precio:</strong> $${ticket.precio.toFixed(2)}</p>
-    <p><strong>Fecha de Venta:</strong> ${new Date(ticket.fecha).toLocaleDateString()}</p>
+    <p><strong>Fecha de Venta:</strong> ${ticket.fechaVenta}</p>
     <p><strong>Forma de Pago:</strong> ${ticket.formaPago || 'Efectivo'}</p>
     <p class="text-sm text-gray-500">¡Gracias por tu compra! Recuerda que la venta es solo de contado efectivo.</p>
     <button class="mt-4 bg-red-500 text-white px-4 py-2 rounded" onclick="eliminarTicket(${ticket.numeroFactura})">
